@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "multiply-x-comments"
+version = "0.1.0"
+description = ""
+authors = ["Andrey Tikhonov <andrey.tikhonov.1974@gmail.com>"]
+readme = "README.md"
+
+[project]
+name = "multiply_x_comments"
+version = "0.1.0"
+description = "multiply_x_comments using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.98.0,<1.0.0"
+]
+
+[project.scripts]
+multiply_x_comments = "multiply_x_comments.main:run"
+run_crew = "multiply_x_comments.main:run"
+train = "multiply_x_comments.main:train"
+replay = "multiply_x_comments.main:replay"
+test = "multiply_x_comments.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+openpyxl = "^3.1.5"
+crewai = {extras = ["tools"], version = "^0.98.0"}

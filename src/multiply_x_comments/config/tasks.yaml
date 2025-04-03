@@ -1,0 +1,6 @@
+several_paraphrased versions_task:
+  description: >
+    Paraphrase {topic} and create {number} paraphrased version based on it.
+  expected_output: >
+    A list of the {topic} paraphrased variants where every variant enclosed in "<" at the begining and ">" at the end
+  agent: paraphrased
